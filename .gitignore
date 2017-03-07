@@ -1,6 +1,7 @@
 conposer.lock
 .vscode/
 .vagrant/
+.vagrant/machines/default/virtualbox
 vendor/
 .env
 .php_cs.cache
