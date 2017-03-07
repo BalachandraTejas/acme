@@ -13,32 +13,28 @@ class Validator
             $rules = explode("|", $value);
 
             foreach ($rules as $rule) {
-                if (isset($_REQUEST[$name])) {
-                    $exploded = explode(":", $rule);
+                $exploded = explode(":", $rule);
 
-                    switch ($exploded[0]) {
-            case 'min':
-              $min = $exploded[1];
-              if (Valid::stringType()->length($min)->validate($_REQUEST[$name]) == false) {
-                  $errors[] = $name . " must be at least " . $min . " characters long";
-              }
-              break;
-            case 'email':
-              if (Valid::email()->validate($_REQUEST[$name]) == false) {
-                  $errors[] = $name . " must be a valid email address";
-              }
-              break;
-            case 'equalTo':
-              if (Valid::equals($_REQUEST[$name])->validate($_REQUEST[$exploded[1]]) == false) {
-                  $errors[] = "Value does not match verification value";
-              }
-              break;
-            default:
-              //do nothing
-              break;
-          }
-                } else {
-                    $errors = "No value found";
+                switch ($exploded[0]) {
+                    case 'min':
+                    $min = $exploded[1];
+                    if (Valid::stringType()->length($min)->validate($_REQUEST[$name]) == false) {
+                        $errors[] = $name . " must be at least " . $min . " characters long";
+                    }
+                    break;
+                    case 'email':
+                    if (Valid::email()->validate($_REQUEST[$name]) == false) {
+                        $errors[] = $name . " must be a valid email address";
+                    }
+                    break;
+                    case 'equalTo':
+                    if (Valid::equals($_REQUEST[$name])->validate($_REQUEST[$exploded[1]]) == false) {
+                        $errors[] = "Value does not match verification value";
+                    }
+                    break;
+                    default:
+                        $errors = "No value found";
+                    break;
                 }
             }
         }
