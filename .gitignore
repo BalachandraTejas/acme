@@ -3,5 +3,6 @@ conposer.lock
 .vagrant/
 .vagrant/machines/default/virtualbox
 vendor/
+.Vagrantfile
 .env
 .php_cs.cache
