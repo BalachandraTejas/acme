@@ -1,0 +1,20 @@
+{
+    "name": "vagrant/vagrant",
+    "authors": [
+        {
+            "name": "Teja Bitra",
+            "email": "bitra.tejaswi@gmail.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.1",
+        "altorouter/altorouter": "1.1.0",
+        "illuminate/database": "^5.4",
+        "vlucas/phpdotenv": "^2.4",
+        "respect/validation": "^1.1",
+        "twig/twig": "^2.0"
+    },
+    "autoload": {
+      "psr-4": { "Acme\\": "src/"}
+    }
+}
