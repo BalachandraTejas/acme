@@ -1,0 +1,6 @@
+conposer.lock
+.vscode/
+.vagrant/
+vendor/
+.env
+.php_cs.cache
