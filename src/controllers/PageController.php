@@ -5,9 +5,13 @@ namespace Acme\Controllers;
 class PageController extends BaseController
 {
   
-  public function getShowHomePage()
+    public function getShowHomePage()
     {
         echo $this->twig->render('home.html');
     } 
     
+    public function pageShowPage()
+    {
+        echo 'Foo!';
+    }
 }

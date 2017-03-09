@@ -6,3 +6,4 @@ vendor/
 Vagrantfile
 .env
 .php_cs.cache
+phinx.yml
