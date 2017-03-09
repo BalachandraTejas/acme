@@ -10,7 +10,7 @@ class PageController extends BaseController
         echo $this->twig->render('home.html');
     } 
     
-    public function pageShowPage()
+    public function getShowPage()
     {
         echo 'Foo!';
     }
